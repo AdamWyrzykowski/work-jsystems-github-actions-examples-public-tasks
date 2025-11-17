@@ -15,5 +15,5 @@ jobs:
       - name: Show the trigger
         run: |
           echo "Event name: ${{ github.event_name }}"
-          echo "druga linia"
+          echo "Event name: ${GITHUB_EVENT_NAME}"
           env
