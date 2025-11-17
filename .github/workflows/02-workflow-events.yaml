@@ -9,10 +9,10 @@ on:
 
 jobs:
   echo:
-    name: "Zobaczy sobie co mnie strigerowalo"
+    name: "Zobaczy sobie co mnie strigerowalo ${{ github.event_name }} ${GITHUB_EVENT_NAME}"
     runs-on: ubuntu-latest
     steps:
-      - name: Show the trigger
+      - name: Show the trigger ${{ github.event_name }} ${GITHUB_EVENT_NAME}
         run: |
           echo "Event name: ${{ github.event_name }}"
           echo "Event name: ---> jest dobiro podstawine ${GITHUB_EVENT_NAME}"
