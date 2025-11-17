@@ -1,0 +1,18 @@
+name: 02 - Workeflow evants
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 9 * * *"     # codziennie o 09:00 UTC
+  workflow_dispatch:
+
+jobs:
+  echo:
+    name: "Zobaczy sobie co mnie strigerowalo"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show the trigger
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "druga linia"
