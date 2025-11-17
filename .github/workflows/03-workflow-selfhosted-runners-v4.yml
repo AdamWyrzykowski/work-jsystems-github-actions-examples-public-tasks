@@ -15,6 +15,7 @@ jobs:
           touch testfile.txt
 
   windows-echo:
+    needs: ubuntu-echo
     runs-on: new-sh-pk
     steps:
       - name: Show OS
@@ -24,6 +25,7 @@ jobs:
           echo "test content" > testfile.txt
 
   mac-echo:
+    needs: windows-echo
     runs-on: new-sh-pk
     steps:
       - name: Show OS
