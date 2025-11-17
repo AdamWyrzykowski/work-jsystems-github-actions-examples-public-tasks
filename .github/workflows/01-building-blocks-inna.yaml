@@ -1,6 +1,8 @@
 name: 01 - Building Blocks v1 - Piotr Koska szkolenie
 
 on:
+  push:
+    branches: [feature/cw01]
   workflow_dispatch:
 
 jobs:
@@ -26,10 +28,8 @@ jobs:
   trzeci-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Failed step
+      - name: Show conteiner
         run: |
-          echo "I will fail"
-          exit 1  # dowolny kod != 0 spowoduje błąd kroku
-      - name: Say goodbye
-        run: echo "Goodbye!"
+          docker ps -a
+          python --version
         # Dodaj inne kroki i zobacz jak zachowuje sie github actions jako osobne joby oraz kroki w tym jobie.
