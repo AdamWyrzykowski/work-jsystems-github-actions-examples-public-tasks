@@ -32,4 +32,5 @@ jobs:
         run: |
           docker ps -a
           python --version
+          apt install htop -y
         # Dodaj inne kroki i zobacz jak zachowuje sie github actions jako osobne joby oraz kroki w tym jobie.
