@@ -15,5 +15,5 @@ jobs:
       - name: Show the trigger
         run: |
           echo "Event name: ${{ github.event_name }}"
-          echo "Event name: ${GITHUB_EVENT_NAME}"
+          echo "Event name: ---> jest dobiro podstawine ${GITHUB_EVENT_NAME}"
           env
