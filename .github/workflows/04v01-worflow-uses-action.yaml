@@ -1,0 +1,19 @@
+name: 04v01 - Workflow uses actions with nodejs.
+
+on:
+ #push:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    name: Build and Test with Node.js
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./CWICZENIA/04-kurczak/
+    steps:
+      # uses nie korzysta z default working-directory  
+      - name: Use actions/checkout action
+        uses: actions/checkout@v5
+      
