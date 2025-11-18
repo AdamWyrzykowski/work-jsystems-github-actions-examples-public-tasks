@@ -24,7 +24,7 @@ jobs:
         run: |
           node -v
           npm -v
-          terraform -version
+          #terraform -version
       - name: Setu terraform
         uses: hashicorp/setup-terraform@v3
         with:
