@@ -6,6 +6,8 @@ on:
 jobs:
   show-context:
     runs-on: ubuntu-latest
+    env:
+      MY_VAR: ${{ vars.MY_VAR }}
     steps:
       - name: Display information
         run: |
@@ -19,4 +21,5 @@ jobs:
       - name: Retrieve Variable
         run: |
           echo "Variable value: ${{ vars.MY_VAR }}"
-          echo "Secret value: $MY_VAR"
+          echo "Evn z Dolar: $MY_VAR"
+          echo "Env value ${{ env.MY_VAR }}"
