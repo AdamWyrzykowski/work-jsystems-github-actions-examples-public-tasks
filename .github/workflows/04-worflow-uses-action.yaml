@@ -18,7 +18,11 @@ jobs:
       - name: Pokaz zawartoś katalogu roboczego
         run: |
           ls -la
+      - name: Pokaz zawartoś katalogu roboczego
+        run: |
           echo "-----------"
           cd CWICZENIA
+      - name: Pokaz zawartoś katalogu roboczego
+        run: |
           echo "-----------"
           ls -la
