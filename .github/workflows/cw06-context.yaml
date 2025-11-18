@@ -29,8 +29,9 @@ jobs:
           echo "Secrets value: ${{ secrets.TAJNY_KLUCZ }}"
           echo "Evn z Dolar: $TAJNY_KLUCZ"
           echo "Env value ${{ env.TAJNY_KLUCZ }}"
-          echo ${{ secrets.TAJNY_KLUCZ }} >> secret.txt
-          cat secret.txt
+          cat << EOF > ./secret.txt
+          ${{ secrets.TAJNY_KLUCZ }}
+          EOF
 
   show-context-kurczak:
     runs-on: ubuntu-latest
@@ -58,8 +59,9 @@ jobs:
           echo "Secrets value: ${{ secrets.TAJNY_KLUCZ }}"
           echo "Evn z Dolar: $TAJNY_KLUCZ"
           echo "Env value ${{ env.TAJNY_KLUCZ }}"
-          echo ${{ secrets.TAJNY_KLUCZ }} >> secret.txt
-          cat secret.txt
+          cat << EOF > ./secret.txt
+          ${{ secrets.TAJNY_KLUCZ }}
+          EOF
 
   show-context-production:
     runs-on: ubuntu-latest
@@ -86,5 +88,7 @@ jobs:
           echo "Secrets value: ${{ secrets.TAJNY_KLUCZ }}"
           echo "Evn z Dolar: $TAJNY_KLUCZ"
           echo "Env value ${{ env.TAJNY_KLUCZ }}"
-          echo ${{ secrets.TAJNY_KLUCZ }} >> secret.txt
+          cat << EOF > ./secret.txt
+          ${{ secrets.TAJNY_KLUCZ }}
+          EOF
           cat secret.txt
