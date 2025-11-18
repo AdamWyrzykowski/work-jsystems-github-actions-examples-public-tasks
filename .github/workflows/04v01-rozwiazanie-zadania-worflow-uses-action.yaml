@@ -1,4 +1,4 @@
-name: 04v01 - Workflow uses actions with nodejs.
+name: 04v01 - Rozwiazanie Workflow uses actions with nodejs.
 
 on:
  #push:
