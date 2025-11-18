@@ -11,9 +11,11 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./CWICZENIA/04-kurczak/
+        working-directory: ./CWICZENIA/04-kurczak/react-app-kurczaczek
     steps:
       # uses nie korzysta z default working-directory  
       - name: Use actions/checkout action
         uses: actions/checkout@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
       
