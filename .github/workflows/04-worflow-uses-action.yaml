@@ -3,10 +3,16 @@ name: 04 - Workflow uses actions
 on:
   workflow_dispatch:
 
+defaults:
+  run:
+    shell: bash
+    working-directory: ./CWICZENIA
+
 jobs:
   ubuntu-echo:
     runs-on: ubuntu-latest
     steps:
+      # uses nie korzysta z default working-directory  
       - name: Use actions/checkout action
         uses: actions/checkout@v3
       - name: Pokaz zawartoś katalogu roboczego
