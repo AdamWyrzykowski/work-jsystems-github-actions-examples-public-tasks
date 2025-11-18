@@ -24,4 +24,15 @@ jobs:
         run: |
           node -v
           npm -v
-      
+      - name: Setu terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.7.5
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.0'
+      - name: test python and terraform versions
+        run: |
+          python --version
+          terraform version
