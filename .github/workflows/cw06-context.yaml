@@ -32,6 +32,7 @@ jobs:
           cat << EOF > ./secret.txt
           ${{ secrets.TAJNY_KLUCZ }}
           EOF
+          cat secret.txt
 
   show-context-kurczak:
     runs-on: ubuntu-latest
@@ -62,6 +63,7 @@ jobs:
           cat << EOF > ./secret.txt
           ${{ secrets.TAJNY_KLUCZ }}
           EOF
+          cat secret.txt
 
   show-context-production:
     runs-on: ubuntu-latest
