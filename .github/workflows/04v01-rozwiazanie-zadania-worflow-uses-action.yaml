@@ -24,6 +24,10 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Unit Test
+        run: npm run test
       
 
   build-windows:
@@ -32,7 +36,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./CWICZENIA/04-kurczak/ #react-app-kurczaczek
+        working-directory: ./CWICZENIA/04-kurczak/react-app-kurczaczek
     steps:
       # uses nie korzysta z default working-directory  
       - name: Use actions/checkout action
@@ -47,3 +51,5 @@ jobs:
           npm -v
       - name: Install dependencies
         run: npm ci
+      - name: Run Unit Test
+        run: npm run test
