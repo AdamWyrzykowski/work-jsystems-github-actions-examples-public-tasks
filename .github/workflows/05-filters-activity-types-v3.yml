@@ -5,7 +5,7 @@ on:
   push:
     branches: [ main ]
     paths-ignore:
-      - '05-usung-filters-and-activity-types/dokumentacja/**'
+      - 'CWICZENIA/05-usung-filters-and-activity-types/dokumentacja/**'
   pull_request:
     branches: [ main ]
     paths-ignore:
