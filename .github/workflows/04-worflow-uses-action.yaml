@@ -10,4 +10,9 @@ jobs:
       - name: Use actions/checkout action
         uses: actions/checkout@v3
       - name: Pokaz zawartoś katalogu roboczego
-        run: ls -la
+        run: 
+          ls -la
+          echo "-----------"
+          cd CWICZENIA
+          echo "-----------"
+          ls -la
