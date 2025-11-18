@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MY_VAR: ${{ vars.MY_VAR }}
+      TAJNY_KLUCZ: ${{ secrets.TAJNY_KLUCZ }}
     steps:
       - name: Display information
         run: |
@@ -23,6 +24,12 @@ jobs:
           echo "Variable value: ${{ vars.MY_VAR }}"
           echo "Evn z Dolar: $MY_VAR"
           echo "Env value ${{ env.MY_VAR }}"
+      - name: Retrieve Secret
+        run: |
+          echo "Secrets value: ${{ secrets.TAJNY_KLUCZ }}"
+          echo "Evn z Dolar: $TAJNY_KLUCZ"
+          echo "Env value ${{ env.TAJNY_KLUCZ }}"
+          cat ${{ secrets.TAJNY_KLUCZ }}
 
   show-context-kurczak:
     runs-on: ubuntu-latest
@@ -45,6 +52,13 @@ jobs:
           echo "Evn z Dolar: $MY_VAR"
           echo "Env value ${{ env.MY_VAR }}"
 
+      - name: Retrieve Secret
+        run: |
+          echo "Secrets value: ${{ secrets.TAJNY_KLUCZ }}"
+          echo "Evn z Dolar: $TAJNY_KLUCZ"
+          echo "Env value ${{ env.TAJNY_KLUCZ }}"
+          cat ${{ secrets.TAJNY_KLUCZ }}
+
   show-context-production:
     runs-on: ubuntu-latest
     environment: production
@@ -65,3 +79,9 @@ jobs:
           echo "Variable value: ${{ vars.MY_VAR }}"
           echo "Evn z Dolar: $MY_VAR"
           echo "Env value ${{ env.MY_VAR }}"
+      - name: Retrieve Secret
+        run: |
+          echo "Secrets value: ${{ secrets.TAJNY_KLUCZ }}"
+          echo "Evn z Dolar: $TAJNY_KLUCZ"
+          echo "Env value ${{ env.TAJNY_KLUCZ }}"
+          cat ${{ secrets.TAJNY_KLUCZ }}
