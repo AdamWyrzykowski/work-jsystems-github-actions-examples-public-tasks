@@ -22,7 +22,7 @@ jobs:
       - name: Pokaz zawartoś katalogu roboczego
         run: |
           echo "-----------"
-          cd ../CWICZENIA
+          cd ..
       - name: Pokaz zawartoś katalogu roboczego
         run: |
           echo "-----------"
