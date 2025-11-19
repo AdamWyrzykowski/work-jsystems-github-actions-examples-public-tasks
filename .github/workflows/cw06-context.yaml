@@ -37,6 +37,7 @@ jobs:
           echo "wayswietlam"
           mv ./secret.txt ./new_secret.txt
           cat new_secret.txt
+          pwd
          
 
   show-context-kurczak:
