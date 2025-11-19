@@ -33,6 +33,11 @@ jobs:
           ${{ secrets.TAJNY_KLUCZ }}
           EOF
           cat secret.txt
+          echo "dodan cos" >> ./secret.txt
+          echo" wayswietlam"
+          mv ./secret.txt ./new_secret.txt
+          cat new_secret.txt
+         
 
   show-context-kurczak:
     runs-on: ubuntu-latest
