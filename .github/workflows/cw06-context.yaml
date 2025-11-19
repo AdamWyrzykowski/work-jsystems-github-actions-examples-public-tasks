@@ -42,7 +42,7 @@ jobs:
           echo "nasz secret z strngie"
           echo "tojeststrogzsectem${{ secrets.TAJNY_KLUCZ }}"
           echo "---- 2----------------------------"
-          echo "piotrkoska"
+          echo "_piotrkoska"
           echo "tojestzenv${{ env.TAJNY_KLUCZ}}"
       - name: Cresate Artifact
         uses: actions/upload-artifact@v5
