@@ -2,7 +2,7 @@ name: "06-06 Pogoda API CI"
 
 on:
   push:
-    branches: [ feature/06-pogoda-api ]
+    branches: [ feature/06-pogoda-api, main ]
   pull_request:
     branches: [ feature/06-pogoda-api ]
   workflow_dispatch:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      LOCAL_IMAGE_NAME: python_pogoda:test
+      LOCAL_IMAGE_NAME: nov_19_2025_python_pogoda:kuraczak
       WORKDIR: ./CWICZENIA/06-context/pogoda_python_flusk
 
     steps:
@@ -69,20 +69,20 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           SHORT_SHA="${GITHUB_SHA::7}"
-          HUB_IMAGE_BASE="${{ secrets.DOCKERHUB_USERNAME }}/python_pogoda"
+          HUB_IMAGE_BASE="${{ secrets.DOCKERHUB_USERNAME }}/nov_19_2025_python_pogoda"
 
           echo "Taguję obraz:"
-          echo " - $HUB_IMAGE_BASE:latest"
+          echo " - $HUB_IMAGE_BASE:gotowy"
           echo " - $HUB_IMAGE_BASE:$SHORT_SHA"
 
-          docker tag "$LOCAL_IMAGE_NAME" "$HUB_IMAGE_BASE:latest"
+          docker tag "$LOCAL_IMAGE_NAME" "$HUB_IMAGE_BASE:gotowy"
           docker tag "$LOCAL_IMAGE_NAME" "$HUB_IMAGE_BASE:$SHORT_SHA"
 
       - name: Push image to Docker Hub
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           SHORT_SHA="${GITHUB_SHA::7}"
-          HUB_IMAGE_BASE="${{ secrets.DOCKERHUB_USERNAME }}/python_pogoda"
+          HUB_IMAGE_BASE="${{ secrets.DOCKERHUB_USERNAME }}/nov_19_2025_python_pogoda"
 
           docker push "$HUB_IMAGE_BASE:latest"
           docker push "$HUB_IMAGE_BASE:$SHORT_SHA"
