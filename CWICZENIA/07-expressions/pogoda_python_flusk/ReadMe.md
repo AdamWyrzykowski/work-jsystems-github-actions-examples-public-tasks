@@ -1,1 +1,2 @@
-Pominmy testy [skip tests]
+Pominmy testy 
+Dodajmy soebie skip test
