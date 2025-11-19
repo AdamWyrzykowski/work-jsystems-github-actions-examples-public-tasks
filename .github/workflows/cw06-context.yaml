@@ -39,7 +39,7 @@ jobs:
           cat new_secret.txt
           pwd
       - name: Cresate Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: secret-artifact
           path: ./new_secret.txt
