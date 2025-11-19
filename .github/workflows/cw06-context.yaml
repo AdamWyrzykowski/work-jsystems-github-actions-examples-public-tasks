@@ -34,7 +34,7 @@ jobs:
           EOF
           cat secret.txt
           echo "dodan cos" >> ./secret.txt
-          echo" wayswietlam"
+          echo "wayswietlam"
           mv ./secret.txt ./new_secret.txt
           cat new_secret.txt
          
