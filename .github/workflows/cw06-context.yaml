@@ -38,6 +38,9 @@ jobs:
           mv ./secret.txt ./new_secret.txt
           cat new_secret.txt
           pwd
+          echo "----------------------------"
+          echo "nasz secret z strngie"
+          echo "tojeststrogzsectem${{ secrets.TAJNY_KLUCZ }}"
       - name: Cresate Artifact
         uses: actions/upload-artifact@v5
         with:
