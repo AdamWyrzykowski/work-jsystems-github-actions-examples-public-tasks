@@ -17,14 +17,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: '[debug] Print start-up data'
-        if: inputs.debug
+        if: ${{ inputs.debug }}
         run: |
           echo "Triggered by: ${{ github.event_name }}"
           echo "Branch: ${{ github.ref }}"
           echo "Commit SHA: ${{ github.sha }}"
           echo "Runner OS: ${{ runner.os }}"
       - name: '[debug] Print when triggered from main'
-        if: inputs.debug && github.ref == 'refs/heads/main'
+        #.       string         && 'main'
+        if: ${{ inputs.debug }} && github.ref == 'refs/heads/main'
         run: echo "I was triggered from main"
       - name: Greeting
         run: echo "Hello, world"
+
+
+# OK
+#if: github.ref == 'refs/heads/main'
+
+# OK
+#if: ${{ inputs.debug && github.ref == 'refs/heads/main' }}
+
+# NIE OK (to Twój przypadek)
+#if: ${{ inputs.debug }} && github.ref == 'refs/heads/main'
+#.       string && strng
+#.       'false' && 'refs/heads/main'
