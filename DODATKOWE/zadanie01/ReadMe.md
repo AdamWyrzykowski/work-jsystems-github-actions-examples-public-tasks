@@ -35,9 +35,14 @@ Przygotuj workflow w Github Actions, który będzie wykonywał następujące kro
   1. Checkout kodu
   2. Konfiguracja Terraform CLI z wykorzystaniem akcji oficjalnej HashiCorp
   3. Inicjalizacja Terraform
+     - terraform init
   4. Plan Terraform
+     - terraform plan -out=tfplan
   5. Apply Terraform (z automatycznym zatwierdzeniem)
+     - terraform apply tfplan
   6. Na koniec terraform destroy (z automatycznym zatwierdzeniem)
+     - terraform plan -destroy -out=tfplan_destroy
+     - terraform apply tfplan_destroy
 To narazie nasz testowy flow. Zobaczmy Czy nasza konfiguracja wykonuje sie prwidlowo.
 
 ## Ad 5.
