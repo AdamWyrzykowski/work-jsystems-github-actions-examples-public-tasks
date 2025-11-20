@@ -21,6 +21,9 @@ Przygotuj odpowiednie VARIABLES środowiskowe w ENVIRONMENT zadanie_testing do p
 4. name          = "example-droplet"
 5. vpc_ip_range  = "10.99.1.0/24"
 
+Secretas do ENVIRONMENT zadanie_testing:
+1. do_token - z Twojego konta DigitalOcean
+
 Przygotuj secrets w ENVIRONMENT zadanie_testing:
 1. do_token - z Twojego konta DigitalOcean
 2. TF_API_TOKEN - z Twojego konta Terraform Cloud
