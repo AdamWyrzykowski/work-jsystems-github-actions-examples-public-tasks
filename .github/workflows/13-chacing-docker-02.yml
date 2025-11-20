@@ -35,8 +35,8 @@ jobs:
       - name: Build Docker image (with cached layers)
         uses: docker/build-push-action@v6
         with:
-          context: ./CWICZENIA/13-caching/docker01
-          file: ./CWICZENIA/13-caching/docker01/Dockerfile
+          context: ./CWICZENIA/13-caching/docker02
+          file: ./CWICZENIA/13-caching/docker02/Dockerfile
 
           # Bez pushowania do rejestru – przykład tylko do builda
           push: false
