@@ -3,7 +3,6 @@ name: 10F Example - Flow Control Demo
 on:
   push:
     branches:
-      - main
       - release/*
     paths-ignore:
       - "docs/**"
