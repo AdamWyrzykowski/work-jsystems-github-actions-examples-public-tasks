@@ -20,8 +20,8 @@ jobs:
 
     strategy:
       matrix:
-        env: [dev, staging, prod]
-
+        env: [development, staging, production]
+        
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
