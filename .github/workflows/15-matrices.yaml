@@ -8,7 +8,7 @@ on:
 
 jobs:
   backwards-compatibility:
-    name: ${{ matrix.os }}-${{ matrix.node-version }}
+    name: ${{ matrix.os }}-${{ matrix.node-version }}-${{ matrix.tag || 'niema' }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
@@ -17,12 +17,12 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
-        # include:
-        #   - os: ubuntu-latest
-        #     node-version: 16.x
-        #   - os: ubuntu-latest
-        #     node-version: 21.x
-        #     tag: experimental
+        include:
+          - os: ubuntu-latest
+            node-version: 16.x
+          - os: ubuntu-latest
+            node-version: 21.x
+            tag: experimental
     steps:
       - name: Setup node
         uses: actions/setup-node@v4
