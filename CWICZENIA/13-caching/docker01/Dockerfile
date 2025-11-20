@@ -1,5 +1,5 @@
 # Prosty obraz nginx z Alpine
-FROM nginx:stable-bookworm
+FROM ubuntu/nginx:1.24-24.04_edge
 
 RUN apt-get update && apt-get install -y curl htop vim tmux fontconfig openjdk-21-jre
 # Usuwamy domyślne pliki z katalogu HTML (opcjonalne)
