@@ -1,7 +1,7 @@
 # Zadanie Github Actions:
 
 ## Ad 1.
-Twoim zadaniem na poczatek będzie przygotowanie Self-Hosted Gihub actions agenta na maszynie wirtualnej w Twoim środowisku https://uczen-imie-nazwisko-gha.jsystems.cloud:23457
+Twoim zadaniem na poczatek będzie przygotowanie Self-Hosted Github actions agenta na maszynie wirtualnej w Twoim środowisku https://uczen-imie-nazwisko-gha.jsystems.cloud:23457
 Instalacji dokonaj recznie.
 
 ## Ad 2.
