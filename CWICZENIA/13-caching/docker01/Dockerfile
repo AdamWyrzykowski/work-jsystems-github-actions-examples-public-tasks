@@ -1,6 +1,7 @@
 # Prosty obraz nginx z Alpine
-FROM nginx:1.27-alpine
+FROM nginx:stable-bookworm
 
+RUN apt-get update && apt-get install -y curl htop vim tmux fontconfig openjdk-21-jre
 # Usuwamy domyślne pliki z katalogu HTML (opcjonalne)
 RUN rm -rf /usr/share/nginx/html/*
 
